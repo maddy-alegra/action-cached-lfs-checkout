@@ -112,9 +112,7 @@ runs:
         path: |
           .git/lfs
           ${{ steps.cache-paths.outputs.CACHE_PATHS }}
-        key: lfs-${{ hashFiles('.lfs-assets-id') }}-v2
-        restore-keys: |
-          lfs-
+        key: alegra-unity-lfs
         enableCrossOsArchive: ${{ inputs.enableCrossOsArchive }}
 
     - name: Git LFS Pull
